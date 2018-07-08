@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>VueJS</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <button v-on:click="increase(2, $event)">Click Me</button>
+      <p>{{ counter }}</p>
+      <p v-on:mousemove="updateCoordinates">
+        Coordinates: {{ x }} / {{ y }}
+        - <span v-on:mousemove.stop="">DEAD SPOT</span>
+      </p>
+      <input type="text" v-on:keyup.enter.space="alertMe" />
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
